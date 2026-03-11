@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Undangan Pernikahan - Ardiansah & Fatma</title>
-  <meta name="description" content="Undangan Pernikahan Ardiansah & Fatma – 15 April 2026. Dengan penuh rasa syukur kami mengundang kehadiran Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami." />
+  <meta name="description"
+    content="Undangan Pernikahan Ardiansah & Fatma – 15 April 2026. Dengan penuh rasa syukur kami mengundang kehadiran Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami." />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap"
+    rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- AOS Animation -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- ===== OPENING / COVER ===== -->
@@ -24,17 +29,19 @@
     <img src="floral_ornament.png" alt="ornament" class="cover-ornament bottom-right" />
     <div class="cover-content">
       <p class="cover-sub animate-fade-down">— Undangan Pernikahan —</p>
-      <h1 class="couple-names animate-fade-up">Ardiansah <span>&amp;</span> Fatma</h1>
-      <p class="cover-date animate-fade-up delay-1">Sabtu, 15 April 2026</p>
+      <h1 class="couple-names animate-fade-up">Ardi <span>&amp;</span> Fatma</h1>
+      <div class="cover-kepada animate-fade-up delay-1">
+        <p class="kepada-label">Kepada</p>
+        <p class="kepada-nama" id="coverNama">Saudara/i</p>
+        <p class="kepada-tempat">Ditempat</p>
+      </div>
+      <p class="cover-date animate-fade-up delay-2">Sabtu, 15 April 2026</p>
       <div class="divider-gold animate-fade-up delay-2"></div>
       <button class="btn-open animate-fade-up delay-3" onclick="openInvitation()">
         <i class="fa-solid fa-envelope-open-text"></i> Buka Undangan
       </button>
     </div>
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <i class="fa-solid fa-chevron-down"></i>
-    </div>
+
   </section>
 
   <!-- ===== MAIN CONTENT (hidden until opened) ===== -->
@@ -42,7 +49,7 @@
 
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
-      <div class="nav-logo">R &amp; A</div>
+      <div class="nav-logo">A &amp; F</div>
       <ul class="nav-links">
         <li><a href="#salam">Salam</a></li>
         <li><a href="#mempelai">Mempelai</a></li>
@@ -73,9 +80,12 @@
       <div class="container">
         <p class="bismillah" data-slide="down" data-slide-delay="100">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
         <div class="divider-gold" data-slide="up" data-slide-delay="200"></div>
-        <p class="salam-text" data-slide="up" data-slide-delay="300">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan putra-putri kami:</p>
+        <p class="salam-text" data-slide="up" data-slide-delay="300">Dengan memohon rahmat dan ridho Allah SWT, kami
+          mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan putra-putri kami:
+        </p>
         <blockquote class="ayat" data-slide="up" data-slide-delay="400">
-          "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu cenderung dan merasa tenteram kepadanya..."
+          "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri
+          supaya kamu cenderung dan merasa tenteram kepadanya..."
           <cite>— QS. Ar-Rum: 21 —</cite>
         </blockquote>
       </div>
@@ -95,17 +105,14 @@
               </div>
             </div>
             <div class="mempelai-badge">Mempelai Pria</div>
-            <h3 class="mempelai-name">Muhammad Ardiansah Pratama, S.T.</h3>
-            <p class="mempelai-parents">Putra pertama dari<br /><strong>Bapak Hendra Susanto</strong><br />dan <strong>Ibu Ratna Dewi</strong></p>
+            <h3 class="mempelai-name">Ardiansah, S.T.</h3>
+            <p class="mempelai-parents">Putra pertama dari<br />
+              <strong>Bapak Sahroni & Ibu Cucu</strong>
+            </p>
             <div class="mempelai-sosmed">
               <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
               <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-          </div>
-
-          <!-- Divider -->
-          <div class="couple-center" data-slide="zoom" data-slide-delay="200">
-            <div class="ampersand-circle">&amp;</div>
           </div>
 
           <!-- Bride -->
@@ -116,8 +123,10 @@
               </div>
             </div>
             <div class="mempelai-badge">Mempelai Wanita</div>
-            <h3 class="mempelai-name">Fatma Rahmawati, S.Pd.</h3>
-            <p class="mempelai-parents">Putri pertama dari<br /><strong>Bapak Agus Salim</strong><br />dan <strong>Ibu Siti Aisyah</strong></p>
+            <h3 class="mempelai-name">Fatmasari Afriyanti, A.Md.Farm</h3>
+            <p class="mempelai-parents">Putri kedua dari<br />
+              <strong>Bapak Barhum & Ibu Yuyun Yuningsih</strong>
+            </p>
             <div class="mempelai-sosmed">
               <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
               <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -173,7 +182,8 @@
             <div class="acara-detail">
               <p><i class="fa-regular fa-calendar"></i> Sabtu, 15 April 2026</p>
               <p><i class="fa-regular fa-clock"></i> 08.00 – 10.00 WIB</p>
-              <p><i class="fa-solid fa-location-dot"></i> Masjid Agung Al-Hikmah<br />Jl. Sudirman No. 45, Jakarta Pusat</p>
+              <p><i class="fa-solid fa-location-dot"></i> Masjid Agung Al-Hikmah<br />Jl. Sudirman No. 45, Jakarta Pusat
+              </p>
             </div>
             <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-map">
               <i class="fa-solid fa-map-location-dot"></i> Lihat Peta
@@ -189,7 +199,8 @@
             <div class="acara-detail">
               <p><i class="fa-regular fa-calendar"></i> Sabtu, 15 April 2026</p>
               <p><i class="fa-regular fa-clock"></i> 11.00 – 17.00 WIB</p>
-              <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna Harmoni<br />Jl. Gatot Subroto No. 12, Jakarta Selatan</p>
+              <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna Harmoni<br />Jl. Gatot Subroto No. 12,
+                Jakarta Selatan</p>
             </div>
             <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-map">
               <i class="fa-solid fa-map-location-dot"></i> Lihat Peta
@@ -212,7 +223,8 @@
             <div class="story-dot"></div>
             <div class="story-content">
               <h4>Awal Pertemuan</h4>
-              <p>Pertemuan pertama kami terjadi di kampus yang sama. Sebuah pertemuan sederhana yang ternyata menjadi awal dari segalanya.</p>
+              <p>Pertemuan pertama kami terjadi di kampus yang sama. Sebuah pertemuan sederhana yang ternyata menjadi
+                awal dari segalanya.</p>
             </div>
           </div>
           <div class="story-item right" data-slide="right" data-slide-delay="150">
@@ -228,7 +240,8 @@
             <div class="story-dot"></div>
             <div class="story-content">
               <h4>Lamaran</h4>
-              <p>Dengan penuh rasa syukur, lamaran dilangsungkan sebagai tanda resminya niat kami untuk bersatu dalam ikatan yang suci.</p>
+              <p>Dengan penuh rasa syukur, lamaran dilangsungkan sebagai tanda resminya niat kami untuk bersatu dalam
+                ikatan yang suci.</p>
             </div>
           </div>
           <div class="story-item right" data-slide="right" data-slide-delay="250">
@@ -236,7 +249,8 @@
             <div class="story-dot"></div>
             <div class="story-content">
               <h4>Pernikahan</h4>
-              <p>Hari yang paling kami nantikan. Kami siap melangkah bersama mengarungi kehidupan baru dengan penuh cinta dan doa.</p>
+              <p>Hari yang paling kami nantikan. Kami siap melangkah bersama mengarungi kehidupan baru dengan penuh
+                cinta dan doa.</p>
             </div>
           </div>
         </div>
@@ -248,14 +262,15 @@
       <div class="container">
         <h2 class="section-title" data-slide="up">Amplop Digital</h2>
         <div class="divider-gold" data-slide="up"></div>
-        <p class="gift-sub" data-slide="up" data-slide-delay="100">Doa restu Bapak/Ibu/Saudara/i adalah hadiah terbesar bagi kami. Namun bagi yang ingin memberikan hadiah, kami menyediakan amplop digital melalui:</p>
+        <p class="gift-sub" data-slide="up" data-slide-delay="100">Doa restu Bapak/Ibu/Saudara/i adalah hadiah terbesar
+          bagi kami. Namun bagi yang ingin memberikan hadiah, kami menyediakan amplop digital melalui:</p>
         <div class="gift-grid">
           <div class="gift-card" data-slide="left" data-slide-delay="200">
             <div class="gift-bank">
               <div class="bank-logo"><i class="fa-solid fa-building-columns"></i></div>
               <div class="bank-info">
                 <p class="bank-name">Bank BCA</p>
-                <p class="account-name">Muhammad Ardiansah Pratama</p>
+                <p class="account-name">Ardiansah</p>
                 <p class="account-num" id="bca-num">1234567890</p>
               </div>
             </div>
@@ -268,7 +283,7 @@
               <div class="bank-logo"><i class="fa-solid fa-building-columns"></i></div>
               <div class="bank-info">
                 <p class="bank-name">Bank Mandiri</p>
-                <p class="account-name">Fatma Rahmawati</p>
+                <p class="account-name">Fatmasari Afriyanti</p>
                 <p class="account-num" id="mandiri-num">0987654321</p>
               </div>
             </div>
@@ -286,7 +301,8 @@
       <div class="container">
         <h2 class="section-title" data-slide="up">Ucapan &amp; Doa</h2>
         <div class="divider-gold" data-slide="up"></div>
-        <p class="ucapan-sub" data-slide="up" data-slide-delay="100">Sampaikan ucapan dan doa terbaik Anda untuk kedua mempelai</p>
+        <p class="ucapan-sub" data-slide="up" data-slide-delay="100">Sampaikan ucapan dan doa terbaik Anda untuk kedua
+          mempelai</p>
 
         <!-- Form -->
         <form id="ucapanForm" class="ucapan-form" data-slide="up" data-slide-delay="200" onsubmit="submitUcapan(event)">
@@ -305,7 +321,8 @@
           </div>
           <div class="form-group full-width">
             <label for="ucapanPesan">Ucapan &amp; Doa *</label>
-            <textarea id="ucapanPesan" rows="4" placeholder="Tuliskan ucapan dan doa terbaik Anda..." required></textarea>
+            <textarea id="ucapanPesan" rows="4" placeholder="Tuliskan ucapan dan doa terbaik Anda..."
+              required></textarea>
           </div>
           <button type="submit" class="btn-submit">
             <i class="fa-solid fa-paper-plane"></i> Kirim Ucapan
@@ -323,7 +340,8 @@
                 <span class="ucapan-hadir hadir">✓ Hadir</span>
               </div>
             </div>
-            <p class="ucapan-msg">"Selamat menempuh hidup baru! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin."</p>
+            <p class="ucapan-msg">"Selamat menempuh hidup baru! Semoga menjadi keluarga yang sakinah, mawaddah,
+              warahmah. Aamiin."</p>
           </div>
           <div class="ucapan-card" data-slide="up" data-slide-delay="100">
             <div class="ucapan-header">
@@ -333,7 +351,8 @@
                 <span class="ucapan-hadir hadir">✓ Hadir</span>
               </div>
             </div>
-            <p class="ucapan-msg">"Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fi khair. Selamat ya Ardiansah!"</p>
+            <p class="ucapan-msg">"Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fi khair. Selamat ya
+              Ardiansah!"</p>
           </div>
         </div>
       </div>
@@ -373,7 +392,8 @@
         <p class="footer-date">— 15 April 2026 —</p>
         <p class="footer-doa">Jazakumullahu khairan katsiran<br />Semoga Allah SWT membalas kebaikan Anda semua</p>
         <div class="footer-divider"></div>
-        <p class="footer-credit">Made with <i class="fa-solid fa-heart" style="color:#c9a96e;"></i> for our special day</p>
+        <p class="footer-credit">Made with <i class="fa-solid fa-heart" style="color:#c9a96e;"></i> for our special day
+        </p>
       </div>
     </footer>
 
@@ -396,4 +416,5 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

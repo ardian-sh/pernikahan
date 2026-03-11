@@ -17,6 +17,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll handlers
   window.addEventListener('scroll', handleScroll);
+
+  // Auto-play music on page load
+  tryPlayMusic();
+
+  // Baca nama penerima dari URL ?kepada=nama
+  const params = new URLSearchParams(window.location.search);
+  const namaTamu = params.get('kepada');
+  const namaDecoded = namaTamu ? decodeURIComponent(namaTamu) : '';
+
+  // Isi cover
+  const el = document.getElementById('coverNama');
+  if (el) {
+    el.textContent = namaDecoded || 'Saudara/i';
+  }
+
+  // Isi & disable input form ucapan
+  const inputNama = document.getElementById('ucapanNama');
+  if (inputNama) {
+    inputNama.value = namaDecoded || 'Anonymous';
+    inputNama.disabled = true;
+  }
 });
 
 // ============================================
@@ -265,8 +286,14 @@ function submitUcapan(e) {
     card.style.transform = 'translateY(0)';
   });
 
-  // Reset form
+  // Reset form — tapi pertahankan nilai nama (dari URL param)
+  const savedNama = document.getElementById('ucapanNama').value;
   document.getElementById('ucapanForm').reset();
+  const inputNama = document.getElementById('ucapanNama');
+  if (inputNama) {
+    inputNama.value = savedNama;
+    inputNama.disabled = true;
+  }
 
   // Show success toast
   showToast('Ucapan terkirim! Terima kasih 🙏');
@@ -345,22 +372,36 @@ function showToast(message) {
 }
 
 // ============================================
-// MUSIC PLAYER (using Web Audio API tone)
+// MUSIC PLAYER (using HTML5 Audio — musik.mp3)
 // ============================================
+const bgMusic = new Audio('musik.mp3');
+bgMusic.loop = true;
+bgMusic.volume = 0.5;
 let musicPlaying = false;
-let audioContext = null;
-let musicNodes = [];
-let musicInterval = null;
-
-// Simple melody notes (frequencies in Hz) — wedding-ish
-const melody = [
-  329.63, 329.63, 392.00, 329.63, 349.23, 293.66, // E4 E4 G4 E4 F4 D4
-  329.63, 329.63, 392.00, 329.63, 440.00, 392.00, // ...
-];
-let melodyIdx = 0;
 
 function tryPlayMusic() {
-  // Don't auto-play immediately — just show the widget
+  // Attempt auto-play; browsers may block until user interaction
+  const playPromise = bgMusic.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      musicPlaying = true;
+      const btn = document.getElementById('musicBtn');
+      if (btn) btn.classList.add('playing');
+    }).catch(() => {
+      // Auto-play blocked — wait for first user interaction
+      const resume = () => {
+        bgMusic.play().then(() => {
+          musicPlaying = true;
+          const btn = document.getElementById('musicBtn');
+          if (btn) btn.classList.add('playing');
+        }).catch(() => {});
+        document.removeEventListener('click', resume);
+        document.removeEventListener('touchstart', resume);
+      };
+      document.addEventListener('click', resume, { once: true });
+      document.addEventListener('touchstart', resume, { once: true });
+    });
+  }
 }
 
 function toggleMusic() {
@@ -372,46 +413,18 @@ function toggleMusic() {
 }
 
 function startMusic() {
-  try {
-    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  bgMusic.play().then(() => {
     musicPlaying = true;
-    document.getElementById('musicBtn').classList.add('playing');
-    playNextNote();
-    musicInterval = setInterval(playNextNote, 600);
-  } catch(e) {
+    const btn = document.getElementById('musicBtn');
+    if (btn) btn.classList.add('playing');
+  }).catch(() => {
     showToast('Audio tidak tersedia di perangkat ini');
-  }
-}
-
-function playNextNote() {
-  if (!audioContext) return;
-  const freq = melody[melodyIdx % melody.length];
-  melodyIdx++;
-
-  const osc = audioContext.createOscillator();
-  const gain = audioContext.createGain();
-
-  osc.connect(gain);
-  gain.connect(audioContext.destination);
-
-  osc.type = 'sine';
-  osc.frequency.setValueAtTime(freq, audioContext.currentTime);
-
-  gain.gain.setValueAtTime(0, audioContext.currentTime);
-  gain.gain.linearRampToValueAtTime(0.08, audioContext.currentTime + 0.05);
-  gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5);
-
-  osc.start(audioContext.currentTime);
-  osc.stop(audioContext.currentTime + 0.55);
+  });
 }
 
 function stopMusic() {
+  bgMusic.pause();
   musicPlaying = false;
-  if (musicInterval) clearInterval(musicInterval);
-  if (audioContext) {
-    audioContext.close();
-    audioContext = null;
-  }
   const btn = document.getElementById('musicBtn');
   if (btn) btn.classList.remove('playing');
 }
