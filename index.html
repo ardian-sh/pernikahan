@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan - Rizky & Ayu</title>
+  <meta name="description" content="Undangan Pernikahan Rizky & Ayu – 15 April 2026. Dengan penuh rasa syukur kami mengundang kehadiran Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== OPENING / COVER ===== -->
+  <section id="cover" class="cover-section">
+    <div class="cover-overlay"></div>
+    <img src="floral_ornament.png" alt="ornament" class="cover-ornament top-left" />
+    <img src="floral_ornament.png" alt="ornament" class="cover-ornament bottom-right" />
+    <div class="cover-content">
+      <p class="cover-sub animate-fade-down">— Undangan Pernikahan —</p>
+      <h1 class="couple-names animate-fade-up">Rizky <span>&amp;</span> Ayu</h1>
+      <p class="cover-date animate-fade-up delay-1">Sabtu, 15 April 2026</p>
+      <div class="divider-gold animate-fade-up delay-2"></div>
+      <button class="btn-open animate-fade-up delay-3" onclick="openInvitation()">
+        <i class="fa-solid fa-envelope-open-text"></i> Buka Undangan
+      </button>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT (hidden until opened) ===== -->
+  <div id="mainContent" class="main-content hidden">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">R &amp; A</div>
+      <ul class="nav-links">
+        <li><a href="#salam">Salam</a></li>
+        <li><a href="#mempelai">Mempelai</a></li>
+        <li><a href="#acara">Acara</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#ucapan">Ucapan</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+      <ul>
+        <li><a href="#salam" onclick="closeMobileMenu()">Salam</a></li>
+        <li><a href="#mempelai" onclick="closeMobileMenu()">Mempelai</a></li>
+        <li><a href="#acara" onclick="closeMobileMenu()">Acara</a></li>
+        <li><a href="#galeri" onclick="closeMobileMenu()">Galeri</a></li>
+        <li><a href="#ucapan" onclick="closeMobileMenu()">Ucapan</a></li>
+      </ul>
+    </div>
+
+    <!-- SALAM PEMBUKA -->
+    <section id="salam" class="section salam-section">
+      <img src="floral_ornament.png" alt="" class="section-ornament top-right" />
+      <div class="container">
+        <p class="bismillah" data-slide="down" data-slide-delay="100">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+        <div class="divider-gold" data-slide="up" data-slide-delay="200"></div>
+        <p class="salam-text" data-slide="up" data-slide-delay="300">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan putra-putri kami:</p>
+        <blockquote class="ayat" data-slide="up" data-slide-delay="400">
+          "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu cenderung dan merasa tenteram kepadanya..."
+          <cite>— QS. Ar-Rum: 21 —</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- MEMPELAI -->
+    <section id="mempelai" class="section mempelai-section">
+      <div class="container">
+        <h2 class="section-title" data-slide="up">Mempelai</h2>
+        <div class="divider-gold" data-slide="up" data-slide-delay="100"></div>
+        <div class="couple-grid">
+          <!-- Groom -->
+          <div class="mempelai-card" data-slide="left" data-slide-delay="150">
+            <div class="mempelai-photo-wrap">
+              <div class="mempelai-photo pria">
+                <i class="fa-solid fa-user photo-icon"></i>
+              </div>
+            </div>
+            <div class="mempelai-badge">Mempelai Pria</div>
+            <h3 class="mempelai-name">Muhammad Rizky Pratama, S.T.</h3>
+            <p class="mempelai-parents">Putra pertama dari<br /><strong>Bapak Hendra Susanto</strong><br />dan <strong>Ibu Ratna Dewi</strong></p>
+            <div class="mempelai-sosmed">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="couple-center" data-slide="zoom" data-slide-delay="200">
+            <div class="ampersand-circle">&amp;</div>
+          </div>
+
+          <!-- Bride -->
+          <div class="mempelai-card" data-slide="right" data-slide-delay="150">
+            <div class="mempelai-photo-wrap">
+              <div class="mempelai-photo wanita">
+                <i class="fa-solid fa-user photo-icon"></i>
+              </div>
+            </div>
+            <div class="mempelai-badge">Mempelai Wanita</div>
+            <h3 class="mempelai-name">Ayu Rahmawati, S.Pd.</h3>
+            <p class="mempelai-parents">Putri pertama dari<br /><strong>Bapak Agus Salim</strong><br />dan <strong>Ibu Siti Aisyah</strong></p>
+            <div class="mempelai-sosmed">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown-section">
+      <div class="countdown-overlay"></div>
+      <div class="container" data-slide="up">
+        <p class="countdown-label">Menuju Hari Bahagia</p>
+        <h2 class="countdown-title">Sabtu, 15 April 2026</h2>
+        <div class="countdown-grid" id="countdown">
+          <div class="countdown-item">
+            <span class="count-num" id="days">00</span>
+            <span class="count-label">Hari</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="count-num" id="hours">00</span>
+            <span class="count-label">Jam</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="count-num" id="minutes">00</span>
+            <span class="count-label">Menit</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="count-num" id="seconds">00</span>
+            <span class="count-label">Detik</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACARA -->
+    <section id="acara" class="section acara-section">
+      <img src="floral_ornament.png" alt="" class="section-ornament bottom-left" />
+      <div class="container">
+        <h2 class="section-title" data-slide="up">Rangkaian Acara</h2>
+        <div class="divider-gold" data-slide="up"></div>
+        <div class="acara-grid">
+          <!-- Akad -->
+          <div class="acara-card" data-slide="left" data-slide-delay="100">
+            <div class="acara-icon-wrap">
+              <i class="fa-solid fa-ring"></i>
+            </div>
+            <h3 class="acara-title">Akad Nikah</h3>
+            <div class="acara-detail">
+              <p><i class="fa-regular fa-calendar"></i> Sabtu, 15 April 2026</p>
+              <p><i class="fa-regular fa-clock"></i> 08.00 – 10.00 WIB</p>
+              <p><i class="fa-solid fa-location-dot"></i> Masjid Agung Al-Hikmah<br />Jl. Sudirman No. 45, Jakarta Pusat</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-map">
+              <i class="fa-solid fa-map-location-dot"></i> Lihat Peta
+            </a>
+          </div>
+
+          <!-- Resepsi -->
+          <div class="acara-card" data-slide="right" data-slide-delay="200">
+            <div class="acara-icon-wrap">
+              <i class="fa-solid fa-champagne-glasses"></i>
+            </div>
+            <h3 class="acara-title">Resepsi Pernikahan</h3>
+            <div class="acara-detail">
+              <p><i class="fa-regular fa-calendar"></i> Sabtu, 15 April 2026</p>
+              <p><i class="fa-regular fa-clock"></i> 11.00 – 17.00 WIB</p>
+              <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna Harmoni<br />Jl. Gatot Subroto No. 12, Jakarta Selatan</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-map">
+              <i class="fa-solid fa-map-location-dot"></i> Lihat Peta
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- GALERI / LOVE STORY -->
+    <section id="galeri" class="section galeri-section">
+      <div class="container">
+        <h2 class="section-title" data-slide="up">Our Story</h2>
+        <div class="divider-gold" data-slide="up"></div>
+        <div class="story-timeline">
+          <div class="story-item" data-slide="left" data-slide-delay="100">
+            <div class="story-year">2019</div>
+            <div class="story-dot"></div>
+            <div class="story-content">
+              <h4>Awal Pertemuan</h4>
+              <p>Pertemuan pertama kami terjadi di kampus yang sama. Sebuah pertemuan sederhana yang ternyata menjadi awal dari segalanya.</p>
+            </div>
+          </div>
+          <div class="story-item right" data-slide="right" data-slide-delay="150">
+            <div class="story-year">2021</div>
+            <div class="story-dot"></div>
+            <div class="story-content">
+              <h4>Menjalin Hubungan</h4>
+              <p>Dengan bismillah, kami memulai perjalanan bersama, saling mendukung dan menguatkan satu sama lain.</p>
+            </div>
+          </div>
+          <div class="story-item" data-slide="left" data-slide-delay="200">
+            <div class="story-year">2024</div>
+            <div class="story-dot"></div>
+            <div class="story-content">
+              <h4>Lamaran</h4>
+              <p>Dengan penuh rasa syukur, lamaran dilangsungkan sebagai tanda resminya niat kami untuk bersatu dalam ikatan yang suci.</p>
+            </div>
+          </div>
+          <div class="story-item right" data-slide="right" data-slide-delay="250">
+            <div class="story-year">2026</div>
+            <div class="story-dot"></div>
+            <div class="story-content">
+              <h4>Pernikahan</h4>
+              <p>Hari yang paling kami nantikan. Kami siap melangkah bersama mengarungi kehidupan baru dengan penuh cinta dan doa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFTS / AMPLOP DIGITAL -->
+    <section class="section gift-section">
+      <div class="container">
+        <h2 class="section-title" data-slide="up">Amplop Digital</h2>
+        <div class="divider-gold" data-slide="up"></div>
+        <p class="gift-sub" data-slide="up" data-slide-delay="100">Doa restu Bapak/Ibu/Saudara/i adalah hadiah terbesar bagi kami. Namun bagi yang ingin memberikan hadiah, kami menyediakan amplop digital melalui:</p>
+        <div class="gift-grid">
+          <div class="gift-card" data-slide="left" data-slide-delay="200">
+            <div class="gift-bank">
+              <div class="bank-logo"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="bank-info">
+                <p class="bank-name">Bank BCA</p>
+                <p class="account-name">Muhammad Rizky Pratama</p>
+                <p class="account-num" id="bca-num">1234567890</p>
+              </div>
+            </div>
+            <button class="btn-copy" onclick="copyText('bca-num', this)">
+              <i class="fa-regular fa-copy"></i> Salin Nomor
+            </button>
+          </div>
+          <div class="gift-card" data-slide="right" data-slide-delay="300">
+            <div class="gift-bank">
+              <div class="bank-logo"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="bank-info">
+                <p class="bank-name">Bank Mandiri</p>
+                <p class="account-name">Ayu Rahmawati</p>
+                <p class="account-num" id="mandiri-num">0987654321</p>
+              </div>
+            </div>
+            <button class="btn-copy" onclick="copyText('mandiri-num', this)">
+              <i class="fa-regular fa-copy"></i> Salin Nomor
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UCAPAN & DOAS -->
+    <section id="ucapan" class="section ucapan-section">
+      <img src="floral_ornament.png" alt="" class="section-ornament top-left" />
+      <div class="container">
+        <h2 class="section-title" data-slide="up">Ucapan &amp; Doa</h2>
+        <div class="divider-gold" data-slide="up"></div>
+        <p class="ucapan-sub" data-slide="up" data-slide-delay="100">Sampaikan ucapan dan doa terbaik Anda untuk kedua mempelai</p>
+
+        <!-- Form -->
+        <form id="ucapanForm" class="ucapan-form" data-slide="up" data-slide-delay="200" onsubmit="submitUcapan(event)">
+          <div class="form-group">
+            <label for="ucapanNama">Nama *</label>
+            <input type="text" id="ucapanNama" placeholder="Nama Anda" required />
+          </div>
+          <div class="form-group">
+            <label for="ucapanHadir">Kehadiran *</label>
+            <select id="ucapanHadir" required>
+              <option value="">-- Pilih --</option>
+              <option value="hadir">Insya Allah Hadir</option>
+              <option value="mungkin">Mungkin Hadir</option>
+              <option value="tidak">Tidak Dapat Hadir</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="ucapanPesan">Ucapan &amp; Doa *</label>
+            <textarea id="ucapanPesan" rows="4" placeholder="Tuliskan ucapan dan doa terbaik Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <i class="fa-solid fa-paper-plane"></i> Kirim Ucapan
+          </button>
+        </form>
+
+        <!-- Ucapan List -->
+        <div class="ucapan-list" id="ucapanList">
+          <!-- seeded cards -->
+          <div class="ucapan-card" data-slide="up">
+            <div class="ucapan-header">
+              <div class="ucapan-avatar">S</div>
+              <div>
+                <p class="ucapan-name">Siska Wijaya</p>
+                <span class="ucapan-hadir hadir">✓ Hadir</span>
+              </div>
+            </div>
+            <p class="ucapan-msg">"Selamat menempuh hidup baru! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin."</p>
+          </div>
+          <div class="ucapan-card" data-slide="up" data-slide-delay="100">
+            <div class="ucapan-header">
+              <div class="ucapan-avatar">B</div>
+              <div>
+                <p class="ucapan-name">Bagas Ramadhan</p>
+                <span class="ucapan-hadir hadir">✓ Hadir</span>
+              </div>
+            </div>
+            <p class="ucapan-msg">"Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fi khair. Selamat ya Rizky!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTOKOL KESEHATAN -->
+    <section class="section protokol-section">
+      <div class="container">
+        <h2 class="section-title" data-slide="up">Protokol Kesehatan</h2>
+        <div class="divider-gold" data-slide="up"></div>
+        <div class="protokol-grid">
+          <div class="protokol-item" data-slide="up" data-slide-delay="100">
+            <i class="fa-solid fa-mask-face"></i>
+            <p>Gunakan masker</p>
+          </div>
+          <div class="protokol-item" data-slide="up" data-slide-delay="200">
+            <i class="fa-solid fa-hands-bubbles"></i>
+            <p>Cuci tangan</p>
+          </div>
+          <div class="protokol-item" data-slide="up" data-slide-delay="300">
+            <i class="fa-solid fa-people-arrows"></i>
+            <p>Jaga jarak</p>
+          </div>
+          <div class="protokol-item" data-slide="up" data-slide-delay="400">
+            <i class="fa-solid fa-temperature-arrow-down"></i>
+            <p>Cek suhu tubuh</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <img src="floral_ornament.png" alt="" class="footer-ornament" />
+      <div class="footer-content">
+        <p class="footer-names">Rizky &amp; Ayu</p>
+        <p class="footer-date">— 15 April 2026 —</p>
+        <p class="footer-doa">Jazakumullahu khairan katsiran<br />Semoga Allah SWT membalas kebaikan Anda semua</p>
+        <div class="footer-divider"></div>
+        <p class="footer-credit">Made with <i class="fa-solid fa-heart" style="color:#c9a96e;"></i> for our special day</p>
+      </div>
+    </footer>
+
+  </div><!-- end mainContent -->
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- AUDIO PLAYER -->
+  <div class="music-player" id="musicPlayer">
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Toggle music">
+      <i class="fa-solid fa-music" id="musicIcon"></i>
+    </button>
+    <span class="music-label">♪ Wedding Song</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
